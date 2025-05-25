@@ -1,0 +1,154 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html , body{
+    height:100%;
+    width:100%
+}
+
+#navbarContainer {
+    border: 0px solid black;
+    background: #FFF9F0;
+    width:100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.navbarLogoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.navbarLogoContainer > svg {
+    width:20px;
+    height: 20px;
+    font-weight: 500;
+
+}
+
+.navbarLogoContainer > div {
+    font-size: 16px; 
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.navbarMenuContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    border: 0px solid blue;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+.navbarMenuDiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+
+.menuItem {
+  position: relative;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.menuItem::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #ff5e00;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.menuItem:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.menuItem:not(:hover)::after {
+  transform-origin: right;
+}
+
+
+.navbarSearchCartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 0px solid black;
+    background: #FFF;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+.navbarSearchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+    gap: 5px;
+
+
+}
+
+.navbarSearchInput {
+    border: none;
+    padding-left: 5px;
+    font-weight: 600;
+}
+
+.navbarSearchInput:focus {
+  outline: none;
+}
+
+.navbarCartContainer {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.cartItemCount {
+  position: absolute;
+  top: 0px;
+  right: -2px;
+  background: rgba(255, 94, 0, 0.6); /* translucent orange */
+  backdrop-filter: blur(4px); /* creates the blur effect */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
